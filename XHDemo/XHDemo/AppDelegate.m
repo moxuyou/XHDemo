@@ -23,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    LXHLog(@"%s", __func__);
+    
     self.m_udid = [FYUDIDTools UDID];
     self.m_idfa = [FYUDIDTools IDFA];
     
@@ -44,23 +46,28 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    LXHLog(@"%s", __func__);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    LXHLog(@"%s", __func__);
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    LXHLog(@"%s", __func__);
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    LXHLog(@"%s", __func__);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    LXHLog(@"%s", __func__);
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
@@ -102,7 +109,7 @@
          */
         switch (status) {
             case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"WIFI");
+                LXHLog(@"WIFI");
                 if (self.isFirstLoad == YES) {
                     [GMUtils showTipsWithHUD:@"您已切换到WIFI网络" showTime:1];
                     
@@ -112,7 +119,7 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:NetworkStatus object:self userInfo:@{@"NetworkStatus" : @"AFNetworkReachabilityStatusReachableViaWiFi"}];
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"3G&4G");
+                LXHLog(@"3G&4G");
                 if (self.isFirstLoad == YES) {
                     [GMUtils showTipsWithHUD:@"您已切换到手机网络" showTime:1];
                 }
@@ -121,7 +128,7 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:NetworkStatus object:self userInfo:@{@"NetworkStatus" : @"AFNetworkReachabilityStatusReachableViaWWAN"}];
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
+                LXHLog(@"没有网络");
                 if (self.isFirstLoad == YES) {
                     [GMUtils showTipsWithHUD:@"您的网络链接已断开" showTime:1];
                 }
@@ -130,7 +137,7 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:NetworkStatus object:self userInfo:@{@"NetworkStatus" : @"AFNetworkReachabilityStatusNotReachable"}];
                 break;
             case AFNetworkReachabilityStatusUnknown:
-                NSLog(@"未知");
+                LXHLog(@"未知");
                 if (self.isFirstLoad == YES) {
                     [GMUtils showTipsWithHUD:@"您已切换到未知网络" showTime:1];
                 }

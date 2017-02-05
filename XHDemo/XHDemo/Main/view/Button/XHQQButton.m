@@ -82,7 +82,7 @@ static CGFloat maxLenght = 80.0;
     self.center = center;
     
     
-    //NSLog(@"%@",NSStringFromCGPoint(self.center));
+    //LXHLog(@"%@",NSStringFromCGPoint(self.center));
     
     //复位
     [pan setTranslation:CGPointZero inView:self];
@@ -95,7 +95,7 @@ static CGFloat maxLenght = 80.0;
     self.smallCircle.bounds = CGRectMake(0, 0, smallR * 2, smallR * 2);
     self.smallCircle.layer.cornerRadius = smallR;
     
-    NSLog(@"当前距离--%f",distance);
+    LXHLog(@"当前距离--%f",distance);
     
     UIBezierPath *path = [self pathWithSmallCircle:self.smallCircle BigCirCle:self];
     
@@ -114,7 +114,8 @@ static CGFloat maxLenght = 80.0;
         
         //判断距离是否大于临界值.
         //大于临界值让按钮消失
-        if(distance < maxLenght && self.smallCircle.hidden == NO) {
+//        if(distance < maxLenght && self.smallCircle.hidden == NO) {//如果放开代表只要超过临界值就算再回到非临界值也不能恢复
+        if(distance < maxLenght) {
             //小于临界值,复位
             self.smallCircle.hidden = NO;
             [self.shapL removeFromSuperlayer];

@@ -8,6 +8,8 @@
 
 #import "XHSearchVC.h"
 #import "XHSearchEdictVC.h"
+#import "XHCustomerAnimaVC.h"
+#import "XHViewAnimaA.h"
 
 static NSString *cellId = @"XHSearchVCCell";
 @interface XHSearchVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -40,6 +42,12 @@ static NSString *cellId = @"XHSearchVCCell";
         [_dataArray addObject:@"核心动画C"];
         [_dataArray addObject:@"核心动画D"];
         [_dataArray addObject:@"核心动画E"];
+        [_dataArray addObject:@"帧动画动画"];
+        [_dataArray addObject:@"自定义转场动画A"];
+        [_dataArray addObject:@"自定义转场动画B"];
+        [_dataArray addObject:@"自定义转场动画C"];
+        [_dataArray addObject:@"自定义转场动画D"];
+        [_dataArray addObject:@"自定义转场动画E"];
     }
     return _dataArray;
 }
@@ -122,6 +130,20 @@ static NSString *cellId = @"XHSearchVCCell";
 }
 
 #pragma mark - 代理
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        
+        XHViewAnimaA *animaA = [[XHViewAnimaA alloc] init];
+        
+        [self.navigationController pushViewController:animaA animated:YES];
+    }else if (indexPath.row == 11) {
+        
+        XHCustomerAnimaVC *animVc = [[XHCustomerAnimaVC alloc] init];
+        [self.navigationController pushViewController:animVc animated:YES];
+    }
+    
+}
 
 #pragma mark - Action
 //左边按钮被点击

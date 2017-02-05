@@ -11,6 +11,8 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        int backInt = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        LXHLog(@"%i", backInt);
+        return backInt;
     }
 }

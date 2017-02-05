@@ -165,7 +165,7 @@
 -(NSData*) rsaDecryptData:(NSData*)cipherData{
     // 分配内存块，用于存放解密后的数据段
     size_t plainBufferSize = SecKeyGetBlockSize(privateKey);
-   // NSLog(@"plainBufferSize = %zd", plainBufferSize);
+   // LXHLog(@"plainBufferSize = %zd", plainBufferSize);
     uint8_t *plainBuffer = malloc(plainBufferSize * sizeof(uint8_t));
     // 计算数据段最大长度及数据段的个数
     double totalLength = [cipherData length];

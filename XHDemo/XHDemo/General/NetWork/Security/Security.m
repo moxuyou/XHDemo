@@ -37,7 +37,7 @@
         // 创造一个json从Data, NSJSONWritingPrettyPrinted指定的JSON数据产的空白，使输出更具可读性。
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
         strJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"json data:%@",strJson);
+        LXHLog(@"json data:%@",strJson);
         
     }else{
         return;
@@ -49,7 +49,7 @@
     NSData *encryptedData = [util encryptData:strConnected withPublicRsa:publicRsa];
     NSString *base64Data = [encryptedData base64EncodedString];
     
-   // NSLog(@"base64Data:%@",base64Data);
+   // LXHLog(@"base64Data:%@",base64Data);
     
     /////////////////////////////解密过程/////////////////////////////////////
     //1.解base64，得到加密后的数据
@@ -68,9 +68,9 @@
         NSString *keyHeader = KEY_HEADER;
         BOOL isPassVerify = [util verifyWithHeaderData:keyHeader andPublicRsa:publicRsa andSign:headerBase64];
         
-        NSLog(@"json:%@",strJson);
-        NSLog(@"headerBase64:%@",headerBase64);
-        NSLog(@"isPassVerify:%d",isPassVerify);
+        LXHLog(@"json:%@",strJson);
+        LXHLog(@"headerBase64:%@",headerBase64);
+        LXHLog(@"isPassVerify:%d",isPassVerify);
         
     }
 }
@@ -102,7 +102,7 @@
                                                            options:0
                                                              error:&error];
         strJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"json data:%@",strJson);
+        LXHLog(@"json data:%@",strJson);
         
     }
     else

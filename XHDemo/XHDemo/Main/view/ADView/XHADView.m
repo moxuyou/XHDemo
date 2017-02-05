@@ -225,7 +225,7 @@ static int const ImageViewCount = 3;
 //控制下一张图片
 - (void)next
 {
-    //    NSLog(@"%s", __func__);
+    //    LXHLog(@"%s", __func__);
     if (self.isScrollDirectionPortrait) {
         [self.scrollView setContentOffset:CGPointMake(0, 2 * self.scrollView.frame.size.height) animated:YES];
     } else {
@@ -239,7 +239,7 @@ static int const ImageViewCount = 3;
         return;
     }
     
-    NSLog(@"%s", __func__);
+    LXHLog(@"%s", __func__);
     
 }
 

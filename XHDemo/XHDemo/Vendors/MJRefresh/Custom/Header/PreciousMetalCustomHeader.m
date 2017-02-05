@@ -36,7 +36,7 @@
     NSData *data = [NSData dataWithContentsOfFile:path];
 
     if (!data) {
-        NSLog(@"图片不存在!");
+        LXHLog(@"图片不存在!");
         return nil;
     }
     

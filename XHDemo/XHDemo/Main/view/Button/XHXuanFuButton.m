@@ -29,7 +29,7 @@
 
 - (void)xuanFuButtonClick{
     
-    NSLog(@"%s", __func__);
+    LXHLog(@"%s", __func__);
 }
 
 @end

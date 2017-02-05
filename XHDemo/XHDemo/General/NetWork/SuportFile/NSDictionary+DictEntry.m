@@ -17,7 +17,7 @@
 -(NSDictionary*)dataEntray
 {
     NSString *jsonString = [JsonDealUtil toJsonWithObj:self];
-    NSLog( @"jsonString : %@",jsonString);
+    LXHLog( @"jsonString : %@",jsonString);
     NSString * randString = [self randString];
     NSString * rKeyValueString = [[CRSA shareInstance] encryptByRsa:randString withKeyType:KeyTypePublic];
     NSString * rDataValueString = [NSString encryptUseDES:jsonString withKey:randString];
@@ -32,7 +32,7 @@
 -(NSDictionary*)dataEntrayEx
 {
     NSString *jsonString = [JsonDealUtil toJsonWithObj:self];
-    NSLog( @"jsonString : %@",jsonString);
+    LXHLog( @"jsonString : %@",jsonString);
     NSString * randString = [self randString];
     NSString * rKeyValueString = [[CRSA shareInstance] encryptByRsa:randString withKeyType:KeyTypePublic];
     NSString * rDataValueString = [NSString encryptUseDES:jsonString withKey:randString];

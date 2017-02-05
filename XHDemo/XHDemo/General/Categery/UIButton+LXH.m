@@ -16,7 +16,7 @@
     UIButton *button = [[UIButton alloc]init];
 
     //不知道为什么不加下面那一句会没有效果
-//    NSLog(@"%lf---%lf", button.titleLabel.frame.size.width, _upDownFloatButton.imageView.frame.size.width);
+//    LXHLog(@"%lf---%lf", button.titleLabel.frame.size.width, _upDownFloatButton.imageView.frame.size.width);
     //更换按钮图片和文字的位置
     button.imageEdgeInsets = UIEdgeInsetsMake(0, button.titleLabel.frame.size.width, 0, -button.titleLabel.frame.size.width);
     button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width, 0, button.imageView.frame.size.width);

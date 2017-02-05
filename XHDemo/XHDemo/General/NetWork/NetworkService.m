@@ -30,7 +30,7 @@
                                                        options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                          error:&error];
     if (! jsonData) {
-        NSLog(@"Got an error: %@", error);
+        LXHLog(@"Got an error: %@", error);
     } else {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
@@ -70,18 +70,18 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            //NSLog(@"success\n");
+            //LXHLog(@"success\n");
             
             
             NSString *aString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSDictionary *decodingMessageDict = [ParseData parseDataWithData:aString];
-            NSLog(@"%@", [decodingMessageDict description]);
+            LXHLog(@"%@", [decodingMessageDict description]);
             
             success(decodingMessageDict);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (fail) {
-            //NSLog(@"fail\n");
+            //LXHLog(@"fail\n");
             fail(nil,error);
         }
     }];
@@ -108,7 +108,7 @@ responseClass:(Class)aClass
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"html", nil];
     [manager.requestSerializer setTimeoutInterval:TimeOut];
     
-//    NSLog(@"\n$--------------------------request url----------------------------------$\n\n%@?para=%@\n\n$-----------------------------------------------------------------------$",urlString,[parameters objectForKey:@"para"]);
+//    LXHLog(@"\n$--------------------------request url----------------------------------$\n\n%@?para=%@\n\n$-----------------------------------------------------------------------$",urlString,[parameters objectForKey:@"para"]);
     
     parameters = [parameters dataEntray];
     //方法通过添加
@@ -166,7 +166,7 @@ responseClass:(Class)aClass
             [formDataDict setValue:imageParam forKey:key];
         }
     }
-    NSLog(@"\n$--------------------------request url----------------------------------$\n\n%@?para=%@\n\n$-----------------------------------------------------------------------$",urlString,[requestParams objectForKey:@"para"]);
+    LXHLog(@"\n$--------------------------request url----------------------------------$\n\n%@?para=%@\n\n$-----------------------------------------------------------------------$",urlString,[requestParams objectForKey:@"para"]);
     
     parameters = [parameters dataEntray];
     
@@ -267,7 +267,7 @@ responseClass:(Class)aClass
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"err:%@.", error);
+        LXHLog(@"err:%@.", error);
     }];
    
 }

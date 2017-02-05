@@ -111,7 +111,7 @@ static const char kKeyChainUDIDAccessGroup[] = "Q8UZ5842WC.com.fanao";
     // Befor going any further...
     if (errorFlag != NULL)
     {
-        NSLog(@"Error: %@", errorFlag);
+        LXHLog(@"Error: %@", errorFlag);
         if (msgBuffer) {
             free(msgBuffer);
         }
@@ -189,13 +189,13 @@ static const char kKeyChainUDIDAccessGroup[] = "Q8UZ5842WC.com.fanao";
     queryErr = SecItemCopyMatching((CFDictionaryRef)dictForQuery, (CFTypeRef*)&dict);
     
     if (queryErr == errSecItemNotFound) {
-//        NSLog(@"KeyChain Item: %@ not found!!!", [NSString stringWithUTF8String:kKeychainUDIDItemIdentifier]);
+//        LXHLog(@"KeyChain Item: %@ not found!!!", [NSString stringWithUTF8String:kKeychainUDIDItemIdentifier]);
     }
     else if (queryErr != errSecSuccess) {
-//        NSLog(@"KeyChain Item query Error!!! Error code:%ld", queryErr);
+//        LXHLog(@"KeyChain Item query Error!!! Error code:%ld", queryErr);
     }
     if (queryErr == errSecSuccess) {
-//        NSLog(@"KeyChain Item: %@", udidValue);
+//        LXHLog(@"KeyChain Item: %@", udidValue);
         
         if (udidValue) {
             udid = [NSString stringWithUTF8String:udidValue.bytes];
@@ -282,7 +282,7 @@ static const char kKeyChainUDIDAccessGroup[] = "Q8UZ5842WC.com.fanao";
         return NO;
     }
     else {
-        NSLog(@"delete success!!!");
+        LXHLog(@"delete success!!!");
     }
     
     [dictToDelete release];
@@ -332,7 +332,7 @@ static const char kKeyChainUDIDAccessGroup[] = "Q8UZ5842WC.com.fanao";
             return NO;
         }
         else {
-            NSLog(@"Update KeyChain Item Success!!!");
+            LXHLog(@"Update KeyChain Item Success!!!");
             [dictForQuery release];
             [dictForUpdate release];
             return YES;

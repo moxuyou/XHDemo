@@ -159,8 +159,38 @@ static NSString *cellId = @"XHSearchEdictVCCell";
 //tableViewCell被选中的时候
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //根据排序状态设置界面属性
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *dataStr = self.dataArray[indexPath.section][indexPath.row];
     
+    UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"编辑数据" message:@"请输入想要修改的内容" preferredStyle:UIAlertControllerStyleAlert];
+    // 添加输入框 (注意:在UIAlertControllerStyleActionSheet样式下是不能添加下面这行代码的)
+    [alertVc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Moxuyou--";
+    }];
+    [alertVc addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = dataStr;
+    }];
+    
+    [alertVc addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        LXHLog(@"取消按钮被点击");
+    }]];
+    
+    __weak __typeof(self)weakSelf = self;
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        UITextField *textF1 = alertVc.textFields[0];
+        UITextField *textF2 = alertVc.textFields[1];
+        LXHLog(@"确定按钮被点击，输入框数据为%@%@", textF1.text, textF2.text);
+        
+        NSMutableArray *array = [NSMutableArray arrayWithArray:weakSelf.dataArray];
+        array[indexPath.section][indexPath.row] = [NSString stringWithFormat:@"%@%@", textF1.text, textF2.text];
+        weakSelf.dataArray = array;
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+        
+    }];
+    
+    [alertVc addAction:sureAction];
+ 
+    [self presentViewController:alertVc animated:YES completion:nil];
 }
 
 // 设置编辑的样式.
@@ -213,6 +243,7 @@ static NSString *cellId = @"XHSearchEdictVCCell";
     
     return YES;
 }
+
 
 #pragma mark - Action
 
