@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83C9B7D4A8DED13E9190710C /* libPods-XHDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A046456E6CF791A7F34ABD6F /* libPods-XHDemo.a */; };
-		841492751E46FD560014A851 /* XHAnimationPushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492741E46FD560014A851 /* XHAnimationPushVC.m */; };
-		841492781E46FDCE0014A851 /* CustomAnimateTransitionPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492771E46FDCE0014A851 /* CustomAnimateTransitionPop.m */; };
-		841492831E4701320014A851 /* CustomAnimateTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492821E4701320014A851 /* CustomAnimateTransitionPush.m */; };
-		841492861E4702F70014A851 /* XHCustomerAnimaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492851E4702F70014A851 /* XHCustomerAnimaVC.m */; };
+		841492901E4708C90014A851 /* CustomAnimateTransitionPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */; };
+		841492911E4708C90014A851 /* CustomAnimateTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 8414928B1E4708C90014A851 /* CustomAnimateTransitionPush.m */; };
+		841492921E4708C90014A851 /* XHAnimationPushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8414928D1E4708C90014A851 /* XHAnimationPushVC.m */; };
+		841492931E4708C90014A851 /* XHCustomerAnimaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8414928F1E4708C90014A851 /* XHCustomerAnimaVC.m */; };
 		8467F6381E348247002B8C20 /* UIButton+FloatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F6371E348247002B8C20 /* UIButton+FloatButton.m */; };
 		8467F63F1E3482C8002B8C20 /* XHQQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F63C1E3482C8002B8C20 /* XHQQButton.m */; };
 		8467F6401E3482C8002B8C20 /* XHXuanFuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F63E1E3482C8002B8C20 /* XHXuanFuButton.m */; };
@@ -161,14 +161,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		841492731E46FD560014A851 /* XHAnimationPushVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAnimationPushVC.h; sourceTree = "<group>"; };
-		841492741E46FD560014A851 /* XHAnimationPushVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnimationPushVC.m; sourceTree = "<group>"; };
-		841492761E46FDCE0014A851 /* CustomAnimateTransitionPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPop.h; sourceTree = "<group>"; };
-		841492771E46FDCE0014A851 /* CustomAnimateTransitionPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPop.m; sourceTree = "<group>"; };
-		841492811E4701320014A851 /* CustomAnimateTransitionPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPush.h; sourceTree = "<group>"; };
-		841492821E4701320014A851 /* CustomAnimateTransitionPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPush.m; sourceTree = "<group>"; };
-		841492841E4702F70014A851 /* XHCustomerAnimaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomerAnimaVC.h; sourceTree = "<group>"; };
-		841492851E4702F70014A851 /* XHCustomerAnimaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCustomerAnimaVC.m; sourceTree = "<group>"; };
+		841492881E4708C90014A851 /* CustomAnimateTransitionPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPop.h; sourceTree = "<group>"; };
+		841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPop.m; sourceTree = "<group>"; };
+		8414928A1E4708C90014A851 /* CustomAnimateTransitionPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPush.h; sourceTree = "<group>"; };
+		8414928B1E4708C90014A851 /* CustomAnimateTransitionPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPush.m; sourceTree = "<group>"; };
+		8414928C1E4708C90014A851 /* XHAnimationPushVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAnimationPushVC.h; sourceTree = "<group>"; };
+		8414928D1E4708C90014A851 /* XHAnimationPushVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnimationPushVC.m; sourceTree = "<group>"; };
+		8414928E1E4708C90014A851 /* XHCustomerAnimaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomerAnimaVC.h; sourceTree = "<group>"; };
+		8414928F1E4708C90014A851 /* XHCustomerAnimaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCustomerAnimaVC.m; sourceTree = "<group>"; };
 		8467F6361E348247002B8C20 /* UIButton+FloatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FloatButton.h"; sourceTree = "<group>"; };
 		8467F6371E348247002B8C20 /* UIButton+FloatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FloatButton.m"; sourceTree = "<group>"; };
 		8467F63B1E3482C8002B8C20 /* XHQQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQQButton.h; sourceTree = "<group>"; };
@@ -571,6 +571,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		841492871E4708A70014A851 /* CustomAnima */ = {
+			isa = PBXGroup;
+			children = (
+				841492881E4708C90014A851 /* CustomAnimateTransitionPop.h */,
+				841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */,
+				8414928A1E4708C90014A851 /* CustomAnimateTransitionPush.h */,
+				8414928B1E4708C90014A851 /* CustomAnimateTransitionPush.m */,
+				8414928C1E4708C90014A851 /* XHAnimationPushVC.h */,
+				8414928D1E4708C90014A851 /* XHAnimationPushVC.m */,
+				8414928E1E4708C90014A851 /* XHCustomerAnimaVC.h */,
+				8414928F1E4708C90014A851 /* XHCustomerAnimaVC.m */,
+			);
+			path = CustomAnima;
+			sourceTree = "<group>";
+		};
 		8467F6391E348295002B8C20 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,16 +624,9 @@
 		847FE7E41E45D69A00CCD1E1 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				841492841E4702F70014A851 /* XHCustomerAnimaVC.h */,
-				841492851E4702F70014A851 /* XHCustomerAnimaVC.m */,
+				841492871E4708A70014A851 /* CustomAnima */,
 				847FE7E81E45D70C00CCD1E1 /* XHViewAnimaA.h */,
 				847FE7E91E45D70C00CCD1E1 /* XHViewAnimaA.m */,
-				841492731E46FD560014A851 /* XHAnimationPushVC.h */,
-				841492741E46FD560014A851 /* XHAnimationPushVC.m */,
-				841492761E46FDCE0014A851 /* CustomAnimateTransitionPop.h */,
-				841492771E46FDCE0014A851 /* CustomAnimateTransitionPop.m */,
-				841492811E4701320014A851 /* CustomAnimateTransitionPush.h */,
-				841492821E4701320014A851 /* CustomAnimateTransitionPush.m */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1703,7 +1711,6 @@
 				84DBB23C1E31B8EB000D43AD /* MJRefreshAutoStateFooter.m in Sources */,
 				84DBB2431E31B8EB000D43AD /* PreciousMetalCustomHeader.m in Sources */,
 				84DBB1A81E31B755000D43AD /* APIFavoriteGoodsCate.m in Sources */,
-				841492831E4701320014A851 /* CustomAnimateTransitionPush.m in Sources */,
 				84DBB1BD1E31B755000D43AD /* GMUtils+DataVerify.m in Sources */,
 				84DBB23D1E31B8EB000D43AD /* MJRefreshBackGifFooter.m in Sources */,
 				84DDCBEB1E35AF73008314D1 /* XHSearchEdictVC.m in Sources */,
@@ -1725,14 +1732,15 @@
 				84DBB1BE1E31B755000D43AD /* GMUtils+HUD.m in Sources */,
 				84DBB1BC1E31B755000D43AD /* FYUDIDTools.m in Sources */,
 				84DBB1B11E31B755000D43AD /* JSONKit.m in Sources */,
-				841492861E4702F70014A851 /* XHCustomerAnimaVC.m in Sources */,
 				84DBB1B61E31B755000D43AD /* ResponseObject.m in Sources */,
+				841492931E4708C90014A851 /* XHCustomerAnimaVC.m in Sources */,
 				84DBB19D1E31B755000D43AD /* UIButton+LXH.m in Sources */,
 				84DBB1A11E31B755000D43AD /* MLBHTTPRequester.m in Sources */,
 				84DBB1AB1E31B755000D43AD /* APIUser.m in Sources */,
 				84DBB1B31E31B755000D43AD /* NSDictionary+DictEntry.m in Sources */,
 				84DBB19F1E31B755000D43AD /* UIImageView+LXH.m in Sources */,
 				84DBB19E1E31B755000D43AD /* UIImage+LXH.m in Sources */,
+				841492921E4708C90014A851 /* XHAnimationPushVC.m in Sources */,
 				84DBB1981E31B755000D43AD /* NSString+json.m in Sources */,
 				84DBB1A51E31B755000D43AD /* ClientRsaUtil.m in Sources */,
 				847FE7EA1E45D70C00CCD1E1 /* XHViewAnimaA.m in Sources */,
@@ -1752,16 +1760,15 @@
 				8467F6441E3482D3002B8C20 /* XHMainCell.m in Sources */,
 				84DBB2461E31B8EB000D43AD /* NSBundle+MJRefresh.m in Sources */,
 				84DBB2631E31BAD1000D43AD /* XHSearchVC.m in Sources */,
-				841492751E46FD560014A851 /* XHAnimationPushVC.m in Sources */,
 				84DBB19A1E31B755000D43AD /* NSString+StrToTime.m in Sources */,
 				84DBB0CC1E31B71F000D43AD /* LXHNavigationBar+LXHDefault.m in Sources */,
 				84DBB1971E31B755000D43AD /* NSString+Extension.m in Sources */,
+				841492911E4708C90014A851 /* CustomAnimateTransitionPush.m in Sources */,
 				8467F63F1E3482C8002B8C20 /* XHQQButton.m in Sources */,
 				84DBB1B21E31B755000D43AD /* MUResponseSerializer.m in Sources */,
 				84DBB0CD1E31B71F000D43AD /* LXHNavigationBar.m in Sources */,
 				84DBB23B1E31B8EB000D43AD /* MJRefreshAutoNormalFooter.m in Sources */,
 				84DBB1A41E31B755000D43AD /* MF_Base64Additions.m in Sources */,
-				841492781E46FDCE0014A851 /* CustomAnimateTransitionPop.m in Sources */,
 				84DBB1961E31B755000D43AD /* NSDictionary+LXH.m in Sources */,
 				84DBB25D1E31BAAF000D43AD /* XHMainVC.m in Sources */,
 				84DBB2661E31BAE3000D43AD /* XHFeatruedVC.m in Sources */,
@@ -1780,6 +1787,7 @@
 				84DBB0CA1E31B71F000D43AD /* CHWelcomADVC.m in Sources */,
 				8467F6531E349868002B8C20 /* XHMainShopViewCell.m in Sources */,
 				84DBB1A01E31B755000D43AD /* UIView+LXH.m in Sources */,
+				841492901E4708C90014A851 /* CustomAnimateTransitionPop.m in Sources */,
 				84DBB23F1E31B8EB000D43AD /* MJRefreshBackStateFooter.m in Sources */,
 				84DBB2471E31B8EB000D43AD /* UIScrollView+MJExtension.m in Sources */,
 				84DBB2481E31B8EB000D43AD /* UIScrollView+MJRefresh.m in Sources */,

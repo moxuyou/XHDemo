@@ -130,6 +130,7 @@ static CGFloat maxLenght = 80.0;
             
             //播放一个动画消失
             UIImageView *imageV = [[UIImageView alloc] initWithFrame:self.bounds];
+            imageV.backgroundColor = [UIColor clearColor];
             
             NSMutableArray *imageArray = [NSMutableArray array];
             for (int i = 0 ; i < 8; i++) {
