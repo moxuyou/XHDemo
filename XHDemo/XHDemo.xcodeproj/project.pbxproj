@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B6E73B1E50A5D6008A2899 /* XHImageLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6E73A1E50A5D6008A2899 /* XHImageLocationVC.m */; };
 		83C9B7D4A8DED13E9190710C /* libPods-XHDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A046456E6CF791A7F34ABD6F /* libPods-XHDemo.a */; };
 		841492901E4708C90014A851 /* CustomAnimateTransitionPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */; };
 		841492911E4708C90014A851 /* CustomAnimateTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 8414928B1E4708C90014A851 /* CustomAnimateTransitionPush.m */; };
@@ -161,6 +162,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03B6E7391E50A5D6008A2899 /* XHImageLocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageLocationVC.h; sourceTree = "<group>"; };
+		03B6E73A1E50A5D6008A2899 /* XHImageLocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageLocationVC.m; sourceTree = "<group>"; };
 		841492881E4708C90014A851 /* CustomAnimateTransitionPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPop.h; sourceTree = "<group>"; };
 		841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPop.m; sourceTree = "<group>"; };
 		8414928A1E4708C90014A851 /* CustomAnimateTransitionPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPush.h; sourceTree = "<group>"; };
@@ -763,6 +766,8 @@
 			children = (
 				84DBB25E1E31BAC3000D43AD /* XHMineVC.h */,
 				84DBB25F1E31BAC3000D43AD /* XHMineVC.m */,
+				03B6E7391E50A5D6008A2899 /* XHImageLocationVC.h */,
+				03B6E73A1E50A5D6008A2899 /* XHImageLocationVC.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1711,6 +1716,7 @@
 				84DBB23C1E31B8EB000D43AD /* MJRefreshAutoStateFooter.m in Sources */,
 				84DBB2431E31B8EB000D43AD /* PreciousMetalCustomHeader.m in Sources */,
 				84DBB1A81E31B755000D43AD /* APIFavoriteGoodsCate.m in Sources */,
+				03B6E73B1E50A5D6008A2899 /* XHImageLocationVC.m in Sources */,
 				84DBB1BD1E31B755000D43AD /* GMUtils+DataVerify.m in Sources */,
 				84DBB23D1E31B8EB000D43AD /* MJRefreshBackGifFooter.m in Sources */,
 				84DDCBEB1E35AF73008314D1 /* XHSearchEdictVC.m in Sources */,
@@ -1909,6 +1915,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 75DG89NH73;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XHDemo/Vendors/BCFeedback(阿里反馈)",
@@ -1944,6 +1951,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 75DG89NH73;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XHDemo/Vendors/BCFeedback(阿里反馈)",
