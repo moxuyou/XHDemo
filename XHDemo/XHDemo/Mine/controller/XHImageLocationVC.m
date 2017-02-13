@@ -7,12 +7,12 @@
 //
 
 #import "XHImageLocationVC.h"
-
+#import "XHTansformView.h"
 @interface XHImageLocationVC ()<UIGestureRecognizerDelegate>
 
 /**  */
 @property (nonatomic, weak)UIView *bgView;
-@property (nonatomic, weak)UIView *redView;
+@property (nonatomic, weak)XHTansformView *redView;
 
 @end
 
@@ -30,11 +30,11 @@
     return _bgView;
 }
 
-- (UIView *)redView{
+- (XHTansformView *)redView{
     
     if (_redView == nil) {
         
-        UIView *view = [[UIView alloc] initWithFrame:self.bgView.bounds];
+        XHTansformView *view = [[XHTansformView alloc] initWithFrame:self.bgView.bounds];
         view.backgroundColor = [UIColor redColor];
         
         CGFloat space = 3.0;
@@ -47,16 +47,16 @@
                 lable.text = [NSString stringWithFormat:@"%i--%i", i, j];
                 lable.textColor = [UIColor whiteColor];
                 lable.font = [UIFont systemFontOfSize:10.0];
-                [view addSubview:lable];
+                //[view addSubview:lable];
             }
         }
         
-        UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-        pan.delegate = self;
+        //UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+        //pan.delegate = self;
         UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
         pinch.delegate = self;
         [view addGestureRecognizer:pinch];
-        [view addGestureRecognizer:pan];
+        //[view addGestureRecognizer:pan];
         [self.bgView addSubview:view];
         _redView = view;
     }
@@ -82,8 +82,8 @@
 - (void)pan:(UIPanGestureRecognizer *)panGes{
     
 //    NSLog(@"%s", __func__);
-    CGPoint point = [panGes translationInView:panGes.view];
-    self.redView.frame = CGRectMake(self.redView.LXHX + point.x, self.redView.LXHY + point.y, self.redView.LXHWidth, self.redView.LXHHeight);
+   // CGPoint point = [panGes translationInView:panGes.view];
+    //self.redView.frame = CGRectMake(self.redView.LXHX + point.x, self.redView.LXHY + point.y, self.redView.LXHWidth, self.redView.LXHHeight);
     
 }
 
@@ -91,12 +91,19 @@
     
 //    NSLog(@"%s", __func__);
     self.redView.transform = CGAffineTransformScale(self.redView.transform, pinchGes.scale, pinchGes.scale);
-    self.redView.transform = CGAffineTransformIdentity;
+    //self.redView.transform = CGAffineTransformIdentity;
+    //self.redView.transform = CGAffineTransformScale(self.redView.transform, 1, 1);
+    //pinchGes.scale=1.0;
+    [pinchGes setScale:1.0];
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     
     return YES;
 }
+
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+//    return YES;
+//}
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03B6E73B1E50A5D6008A2899 /* XHImageLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6E73A1E50A5D6008A2899 /* XHImageLocationVC.m */; };
+		03EBA2461E518F0600563DF1 /* XHTansformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EBA2451E518F0600563DF1 /* XHTansformView.m */; };
 		83C9B7D4A8DED13E9190710C /* libPods-XHDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A046456E6CF791A7F34ABD6F /* libPods-XHDemo.a */; };
 		841492901E4708C90014A851 /* CustomAnimateTransitionPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */; };
 		841492911E4708C90014A851 /* CustomAnimateTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 8414928B1E4708C90014A851 /* CustomAnimateTransitionPush.m */; };
@@ -164,6 +165,8 @@
 /* Begin PBXFileReference section */
 		03B6E7391E50A5D6008A2899 /* XHImageLocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageLocationVC.h; sourceTree = "<group>"; };
 		03B6E73A1E50A5D6008A2899 /* XHImageLocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageLocationVC.m; sourceTree = "<group>"; };
+		03EBA2441E518F0600563DF1 /* XHTansformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHTansformView.h; path = XHDemo/Mine/controller/XHTansformView.h; sourceTree = SOURCE_ROOT; };
+		03EBA2451E518F0600563DF1 /* XHTansformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHTansformView.m; path = XHDemo/Mine/controller/XHTansformView.m; sourceTree = SOURCE_ROOT; };
 		841492881E4708C90014A851 /* CustomAnimateTransitionPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPop.h; sourceTree = "<group>"; };
 		841492891E4708C90014A851 /* CustomAnimateTransitionPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimateTransitionPop.m; sourceTree = "<group>"; };
 		8414928A1E4708C90014A851 /* CustomAnimateTransitionPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimateTransitionPush.h; sourceTree = "<group>"; };
@@ -782,6 +785,8 @@
 		84DBB0A01E31B469000D43AD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				03EBA2441E518F0600563DF1 /* XHTansformView.h */,
+				03EBA2451E518F0600563DF1 /* XHTansformView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1592,7 +1597,7 @@
 				TargetAttributes = {
 					84DBB07A1E31B3AA000D43AD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 75DG89NH73;
+						DevelopmentTeam = 8ELH9B8J2Q;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1715,6 +1720,7 @@
 				84DBB19B1E31B755000D43AD /* NSString+Util.m in Sources */,
 				84DBB23C1E31B8EB000D43AD /* MJRefreshAutoStateFooter.m in Sources */,
 				84DBB2431E31B8EB000D43AD /* PreciousMetalCustomHeader.m in Sources */,
+				03EBA2461E518F0600563DF1 /* XHTansformView.m in Sources */,
 				84DBB1A81E31B755000D43AD /* APIFavoriteGoodsCate.m in Sources */,
 				03B6E73B1E50A5D6008A2899 /* XHImageLocationVC.m in Sources */,
 				84DBB1BD1E31B755000D43AD /* GMUtils+DataVerify.m in Sources */,
@@ -1914,7 +1920,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 75DG89NH73;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8ELH9B8J2Q;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1950,7 +1957,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 75DG89NH73;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8ELH9B8J2Q;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
