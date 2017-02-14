@@ -23,6 +23,9 @@ PODS:
   - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
   - Masonry (1.0.2)
+  - Realm (2.1.2):
+    - Realm/Headers (= 2.1.2)
+  - Realm/Headers (2.1.2)
   - SDAutoLayout (2.1.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CocoaLumberjack (~> 3.0.0)
   - Masonry (~> 1.0.2)
+  - Realm (~> 2.1.2)
   - SDAutoLayout (~> 2.1.1)
   - SDWebImage (~> 3.8.1)
 
@@ -39,9 +43,10 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: fbdde5afc2a0614a932b2a51ffa20453caf72487
+PODFILE CHECKSUM: d6ac3f38c767a2ae2e3d45a83f8b2ecf6d9f7e07
 
 COCOAPODS: 1.1.1

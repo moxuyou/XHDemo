@@ -8,5 +8,6 @@ target 'XHDemo' do
     pod 'SDAutoLayout', '~> 2.1.1'
     pod 'Masonry', '~> 1.0.2'
     pod 'CocoaLumberjack’, '~> 3.0.0'
+    pod 'Realm', '~> 2.1.2'
     
 end
