@@ -55,6 +55,11 @@
 		84518CBE1E52DE4900788830 /* 309769.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84518C951E52DE4900788830 /* 309769.mp3 */; };
 		84518CBF1E52DE4900788830 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84518C961E52DE4900788830 /* 339744.mp3 */; };
 		84518CC01E52DE4900788830 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84518C971E52DE4900788830 /* Musics.plist */; };
+		84518CCD1E52E85500788830 /* XHMusicPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84518CCC1E52E85500788830 /* XHMusicPlayVC.m */; };
+		84518CD01E52E9C300788830 /* XHMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84518CCF1E52E9C300788830 /* XHMusicModel.m */; };
+		84518CD41E52EE8700788830 /* XHMusicListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84518CD21E52EE8700788830 /* XHMusicListVC.m */; };
+		84518CD81E52FDE200788830 /* XHMusicPlayTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84518CD71E52FDE200788830 /* XHMusicPlayTitleView.m */; };
+		84518CDB1E5308D100788830 /* XHMusicPlayMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84518CDA1E5308D100788830 /* XHMusicPlayMiddleView.m */; };
 		8467F6381E348247002B8C20 /* UIButton+FloatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F6371E348247002B8C20 /* UIButton+FloatButton.m */; };
 		8467F63F1E3482C8002B8C20 /* XHQQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F63C1E3482C8002B8C20 /* XHQQButton.m */; };
 		8467F6401E3482C8002B8C20 /* XHXuanFuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467F63E1E3482C8002B8C20 /* XHXuanFuButton.m */; };
@@ -257,6 +262,16 @@
 		84518C951E52DE4900788830 /* 309769.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 309769.mp3; sourceTree = "<group>"; };
 		84518C961E52DE4900788830 /* 339744.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 339744.mp3; sourceTree = "<group>"; };
 		84518C971E52DE4900788830 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
+		84518CCB1E52E85500788830 /* XHMusicPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicPlayVC.h; sourceTree = "<group>"; };
+		84518CCC1E52E85500788830 /* XHMusicPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPlayVC.m; sourceTree = "<group>"; };
+		84518CCE1E52E9C300788830 /* XHMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicModel.h; sourceTree = "<group>"; };
+		84518CCF1E52E9C300788830 /* XHMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicModel.m; sourceTree = "<group>"; };
+		84518CD11E52EE8700788830 /* XHMusicListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicListVC.h; sourceTree = "<group>"; };
+		84518CD21E52EE8700788830 /* XHMusicListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicListVC.m; sourceTree = "<group>"; };
+		84518CD61E52FDE200788830 /* XHMusicPlayTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicPlayTitleView.h; sourceTree = "<group>"; };
+		84518CD71E52FDE200788830 /* XHMusicPlayTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPlayTitleView.m; sourceTree = "<group>"; };
+		84518CD91E5308D100788830 /* XHMusicPlayMiddleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMusicPlayMiddleView.h; sourceTree = "<group>"; };
+		84518CDA1E5308D100788830 /* XHMusicPlayMiddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMusicPlayMiddleView.m; sourceTree = "<group>"; };
 		8467F6361E348247002B8C20 /* UIButton+FloatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FloatButton.h"; sourceTree = "<group>"; };
 		8467F6371E348247002B8C20 /* UIButton+FloatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FloatButton.m"; sourceTree = "<group>"; };
 		8467F63B1E3482C8002B8C20 /* XHQQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQQButton.h; sourceTree = "<group>"; };
@@ -852,6 +867,10 @@
 			children = (
 				84DBB2641E31BAE3000D43AD /* XHFeatruedVC.h */,
 				84DBB2651E31BAE3000D43AD /* XHFeatruedVC.m */,
+				84518CCB1E52E85500788830 /* XHMusicPlayVC.h */,
+				84518CCC1E52E85500788830 /* XHMusicPlayVC.m */,
+				84518CD11E52EE8700788830 /* XHMusicListVC.h */,
+				84518CD21E52EE8700788830 /* XHMusicListVC.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -859,6 +878,8 @@
 		84DBB0971E31B469000D43AD /* model */ = {
 			isa = PBXGroup;
 			children = (
+				84518CCE1E52E9C300788830 /* XHMusicModel.h */,
+				84518CCF1E52E9C300788830 /* XHMusicModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -866,6 +887,10 @@
 		84DBB0981E31B469000D43AD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				84518CD61E52FDE200788830 /* XHMusicPlayTitleView.h */,
+				84518CD71E52FDE200788830 /* XHMusicPlayTitleView.m */,
+				84518CD91E5308D100788830 /* XHMusicPlayMiddleView.h */,
+				84518CDA1E5308D100788830 /* XHMusicPlayMiddleView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1915,6 +1940,7 @@
 				84DBB1931E31B755000D43AD /* NSCalendar+LXH.m in Sources */,
 				84DBB19B1E31B755000D43AD /* NSString+Util.m in Sources */,
 				84DBB23C1E31B8EB000D43AD /* MJRefreshAutoStateFooter.m in Sources */,
+				84518CD41E52EE8700788830 /* XHMusicListVC.m in Sources */,
 				84DBB2431E31B8EB000D43AD /* PreciousMetalCustomHeader.m in Sources */,
 				03EBA2461E518F0600563DF1 /* XHTansformView.m in Sources */,
 				84DBB1A81E31B755000D43AD /* APIFavoriteGoodsCate.m in Sources */,
@@ -1942,6 +1968,7 @@
 				84DBB1B11E31B755000D43AD /* JSONKit.m in Sources */,
 				84DBB1B61E31B755000D43AD /* ResponseObject.m in Sources */,
 				841492931E4708C90014A851 /* XHCustomerAnimaVC.m in Sources */,
+				84518CD81E52FDE200788830 /* XHMusicPlayTitleView.m in Sources */,
 				84DBB19D1E31B755000D43AD /* UIButton+LXH.m in Sources */,
 				84DBB1A11E31B755000D43AD /* MLBHTTPRequester.m in Sources */,
 				84DBB1AB1E31B755000D43AD /* APIUser.m in Sources */,
@@ -1974,6 +2001,7 @@
 				841492911E4708C90014A851 /* CustomAnimateTransitionPush.m in Sources */,
 				8467F63F1E3482C8002B8C20 /* XHQQButton.m in Sources */,
 				84DBB1B21E31B755000D43AD /* MUResponseSerializer.m in Sources */,
+				84518CCD1E52E85500788830 /* XHMusicPlayVC.m in Sources */,
 				84DBB0CD1E31B71F000D43AD /* LXHNavigationBar.m in Sources */,
 				84DBB23B1E31B8EB000D43AD /* MJRefreshAutoNormalFooter.m in Sources */,
 				84DBB1A41E31B755000D43AD /* MF_Base64Additions.m in Sources */,
@@ -1982,6 +2010,7 @@
 				84DBB2661E31BAE3000D43AD /* XHFeatruedVC.m in Sources */,
 				84DBB19C1E31B755000D43AD /* UIBarButtonItem+LXH.m in Sources */,
 				84DBB1A21E31B755000D43AD /* NetworkService.m in Sources */,
+				84518CDB1E5308D100788830 /* XHMusicPlayMiddleView.m in Sources */,
 				84DBB2451E31B8EB000D43AD /* MJRefreshConst.m in Sources */,
 				84DBB1A91E31B755000D43AD /* APIParams.m in Sources */,
 				84DBB1AA1E31B755000D43AD /* APIProfitList.m in Sources */,
@@ -1998,6 +2027,7 @@
 				841492901E4708C90014A851 /* CustomAnimateTransitionPop.m in Sources */,
 				84DBB23F1E31B8EB000D43AD /* MJRefreshBackStateFooter.m in Sources */,
 				84DBB2471E31B8EB000D43AD /* UIScrollView+MJExtension.m in Sources */,
+				84518CD01E52E9C300788830 /* XHMusicModel.m in Sources */,
 				84DBB2481E31B8EB000D43AD /* UIScrollView+MJRefresh.m in Sources */,
 				84DBB1A61E31B755000D43AD /* RSAEncryptor.m in Sources */,
 				84DBB2351E31B8EB000D43AD /* MJRefreshAutoFooter.m in Sources */,

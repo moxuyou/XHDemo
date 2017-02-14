@@ -49,7 +49,7 @@
     LXHNavigationController *searchNav = [[LXHNavigationController alloc] initWithRootViewController:searchVc];
     [self addChildViewController:searchNav];
     
-    //发现
+    //零碎
     XHFeatruedVC *featruedVc = [[XHFeatruedVC alloc] init];
     LXHNavigationController *featruedNav = [[LXHNavigationController alloc] initWithRootViewController:featruedVc];
     [self addChildViewController:featruedNav];
@@ -82,9 +82,9 @@
     discoverNav.tabBarItem.image = [UIImage imageWithOriginal:@"tabBar_new_icon"];
     discoverNav.tabBarItem.selectedImage = [UIImage imageWithOriginal:@"tabBar_new_click_icon"];
     
-    //发现
+    //零碎
     LXHNavigationController *choosedNav = self.childViewControllers[2];
-    choosedNav.tabBarItem.title = @"自选";
+    choosedNav.tabBarItem.title = @"零碎";
     choosedNav.tabBarItem.image = [UIImage imageWithOriginal:@"tabBar_me_icon"];
     choosedNav.tabBarItem.selectedImage = [UIImage imageWithOriginal:@"tabBar_me_click_icon"];
     

@@ -1,17 +1,17 @@
 //
-//  XHFeatruedVC.m
+//  XHMusicListVC.m
 //  XHDemo
 //
-//  Created by moxuyou on 2017/1/20.
+//  Created by moxuyou on 2017/2/14.
 //  Copyright © 2017年 moxuyou. All rights reserved.
 //
 
-#import "XHFeatruedVC.h"
 #import "XHMusicListVC.h"
+#import "XHMusicModel.h"
+#import "XHMusicPlayVC.h"
 
-static NSString *cellId = @"XHFeatruedVCCell";
-@interface XHFeatruedVC ()<UITableViewDelegate,UITableViewDataSource>
-
+static NSString *cellId = @"XHMusicListVCCell";
+@interface XHMusicListVC ()<UITableViewDelegate,UITableViewDataSource>
 /**  */
 @property (weak, nonatomic)UITableView *tableView;
 /**  */
@@ -20,21 +20,28 @@ static NSString *cellId = @"XHFeatruedVCCell";
 @property (weak, nonatomic)UIButton *leftButton;
 /** navigationBar右边的按钮 */
 @property (weak, nonatomic)UIButton *rightButton;
+
 @end
 
-@implementation XHFeatruedVC
+@implementation XHMusicListVC
+
 
 #pragma mark - 懒加载
 
 - (NSMutableArray *)dataArray{
     
     if (_dataArray == nil) {
-        _dataArray = [NSMutableArray array];
-        [_dataArray addObject:@"音乐播放器"];
-        [_dataArray addObject:@"Moxuyou--B"];
-        [_dataArray addObject:@"Moxuyou--C"];
-        [_dataArray addObject:@"Moxuyou--D"];
-        [_dataArray addObject:@"Moxuyou--E"];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Musics.plist" ofType:nil];
+        
+        NSArray *array = [NSArray arrayWithContentsOfFile:path];
+        NSMutableArray *arrayModel = [NSMutableArray array];
+        for (NSDictionary *dict in array) {
+            
+            XHMusicModel *model = [XHMusicModel musicModelWithDict:dict];
+            [arrayModel addObject:model];
+        }
+        _dataArray = arrayModel;
     }
     return _dataArray;
 }
@@ -74,11 +81,8 @@ static NSString *cellId = @"XHFeatruedVCCell";
 - (void)setUpNavigationBar{
     
     //添加左边按钮
-    [self.navigationBar addNavigationBarLeftButton:@"左边"];
-    //添加右边按钮
-    [self.navigationBar addNavigationBarRightButton:@"右边"];
-    //添加标题
-    [self.navigationBar addNavigationBarTitile:@"零碎知识总结"];
+    [self.navigationBar addNavigationBarLeftButton:@"返回"];
+    
 }
 
 #pragma mark - 数据源
@@ -95,7 +99,10 @@ static NSString *cellId = @"XHFeatruedVCCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    
+    XHMusicModel *model = self.dataArray[indexPath.row];
+    cell.textLabel.text = model.name;
+    cell.imageView.image = [UIImage imageNamed:model.singerIcon];
     
     return cell;
 }
@@ -103,29 +110,23 @@ static NSString *cellId = @"XHFeatruedVCCell";
 #pragma mark - 代理
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 0) {
-        XHMusicListVC *vc = [[XHMusicListVC alloc] init];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    XHMusicPlayVC *vc = [[XHMusicPlayVC alloc] init];
+    vc.model = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
-#pragma mark - Action
-//点击标题栏事件
-- (void)tapMiddleLabelEvent:(id)sender{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"%s", __func__);
+    return 66.66;
 }
+
+#pragma mark - Action
+
 //点击左按钮事件
 -(void)clickCustomNavigationBarLeftButtonEvent:(id)sender{
     
-    NSLog(@"%s", __func__);
-}
-//点击右按钮事件
--(void)clickCustomNavigationBarRightButtonEvent:(id)sender{
-    
-    NSLog(@"%s", __func__);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
