@@ -1,4 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://repo.baichuan-ios.taobao.com/baichuanSDK/AliBCSpecs.git'
+
 platform :ios, '8.0'
+inhibit_all_warnings!
 
 target 'XHDemo' do
     
@@ -9,5 +13,9 @@ target 'XHDemo' do
     pod 'Masonry', '~> 1.0.2'
     pod 'CocoaLumberjack’, '~> 3.0.0'
     pod 'Realm', '~> 2.1.2'
+    pod 'BCUserTrack'
+    pod 'ZipArchive', '~> 1.4.0'
+    pod 'wax', :git => 'https://github.com/alibaba/wax.git'
+    pod 'JSPatchPlatform'
     
 end

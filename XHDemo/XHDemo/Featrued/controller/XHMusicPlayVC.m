@@ -59,7 +59,7 @@
     
     if (_middleView == nil) {
         
-        XHMusicPlayMiddleView *view = [XHMusicPlayMiddleView musicPlayMiddleView];
+        XHMusicPlayMiddleView *view = [[XHMusicPlayMiddleView alloc] init];
         
         [self.view addSubview:view];
         _middleView = view;

@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BCUserTrack (5.1.0.9):
+    - UTDID
   - CocoaLumberjack (3.0.0):
     - CocoaLumberjack/Default (= 3.0.0)
     - CocoaLumberjack/Extensions (= 3.0.0)
@@ -22,6 +24,13 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
+  - JSPatch (1.1.2):
+    - JSPatch/Core (= 1.1.2)
+  - JSPatch/Core (1.1.2)
+  - JSPatchPlatform (1.6.5):
+    - JSPatchPlatform/Core (= 1.6.5)
+  - JSPatchPlatform/Core (1.6.5):
+    - JSPatch
   - Masonry (1.0.2)
   - Realm (2.1.2):
     - Realm/Headers (= 2.1.2)
@@ -30,23 +39,45 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - UTDID (1.0.0)
+  - wax (1.0.0)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - BCUserTrack
   - CocoaLumberjack (~> 3.0.0)
+  - JSPatchPlatform
   - Masonry (~> 1.0.2)
   - Realm (~> 2.1.2)
   - SDAutoLayout (~> 2.1.1)
   - SDWebImage (~> 3.8.1)
+  - wax (from `https://github.com/alibaba/wax.git`)
+  - ZipArchive (~> 1.4.0)
+
+EXTERNAL SOURCES:
+  wax:
+    :git: https://github.com/alibaba/wax.git
+
+CHECKOUT OPTIONS:
+  wax:
+    :commit: 5d4844bddf1763001d28df7edfd1b5ca131404c2
+    :git: https://github.com/alibaba/wax.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BCUserTrack: 684f468b8143be7a2ed10a8c449fd959b2a3a099
   CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
+  JSPatch: 741205ebb2e2238c223a436e4c8cf75cf40a345f
+  JSPatchPlatform: 45e5a0b2d0a229baec33cbcf7dd3fdb0630edbe8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
   SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  UTDID: 05c4737c8cf5c210e86d0235570816ed00e023e8
+  wax: 336660568444d2d060dd69f0c493dc43b48505c5
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: d6ac3f38c767a2ae2e3d45a83f8b2ecf6d9f7e07
+PODFILE CHECKSUM: 88fe4361ae081c1a56a574df438ded0b5cee16d9
 
 COCOAPODS: 1.1.1

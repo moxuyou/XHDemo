@@ -11,6 +11,9 @@
 
 @interface LXHNavigationController ()<UIGestureRecognizerDelegate>
 
+/** 全屏返回手势 */
+@property (strong, nonatomic) UIPanGestureRecognizer *panHandleNavigationTransition;
+
 @end
 
 @implementation LXHNavigationController
@@ -26,6 +29,7 @@
     dict[NSFontAttributeName] = [UIFont boldSystemFontOfSize:18];
     [item setTitleTextAttributes:dict];
     
+    self.isUsingHandleNavigationTransition = YES;
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wundeclared-selector"
     //添加拖拽手势
@@ -73,7 +77,7 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-       return self.childViewControllers.count > 1;
+       return self.childViewControllers.count > 1 && self.isUsingHandleNavigationTransition;
 }
 
 @end

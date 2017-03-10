@@ -10,6 +10,7 @@
 #import "XHMainCell.h"
 #import "XHXuanFuButton.h"
 #import "XHMainShopView.h"
+//#import <AliHotFixDebug/AliHotFixDebug.h>
 
 static NSString *cellId = @"XHMainVCCell";
 @interface XHMainVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -38,6 +39,7 @@ static NSString *cellId = @"XHMainVCCell";
         
         XHXuanFuButton *xuanFuButton = [[XHXuanFuButton alloc] initWithFrame:CGRectMake(0, 100, 60, 60)];
         [[UIApplication sharedApplication].keyWindow addSubview:xuanFuButton];
+        [xuanFuButton addTarget:self action:@selector(xuanFuButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         _xuanFuButton = xuanFuButton;
     }
@@ -277,6 +279,25 @@ static NSString *cellId = @"XHMainVCCell";
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:view cache:YES];
         
     }];
+}
+
+- (void)xuanFuButtonClick{
+    
+    NSLog(@"%s", __func__);
+//   [AliHotFixDebug showDebug:self];
+    NSString* string = @"2017-04-29 01:12:30";
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+    [inputFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    inputFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [inputFormatter setTimeStyle:NSDateFormatterFullStyle];// 修改下面提到的北京时间的时间格式
+    [inputFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    [inputFormatter setDateFormat:@"yyyy-MM-dd HH-mm-ss"];
+    NSDate *newdate = [inputFormatter dateFromString:string];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];// HH:mm:ss
+    NSString *strDate = [dateFormatter stringFromDate:newdate];
+    NSLog(@"%@", strDate);
 }
 
 #pragma mark - 网络请求

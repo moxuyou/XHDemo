@@ -17,7 +17,7 @@
 @implementation XHMineVC
 
 - (UIButton *)turnBtn{
-    if (!_turnBtn) {
+    if (_turnBtn == nil) {
         UIButton *imageBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
         [imageBtn setTitle:@"点击跳转图片浏览器" forState:UIControlStateNormal];
         [imageBtn sizeToFit];
@@ -43,16 +43,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     
-//    UIApplication *app = [UIApplication sharedApplication];
-//    app.statusBarStyle = UIStatusBarStyleLightContent;
-//    app.statusBarHidden = NO;
     [self turnBtn];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    
-    
-    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -61,15 +52,13 @@
 }
 
 - (void)imageBtnClick{
+
     
-    NSLog(@"%s", __func__);
+//    [self.turnBtn setTitle:[self isOuShu:20] forState:UIControlStateNormal];
     XHImageLocationVC *vc = [[XHImageLocationVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
+    
 }
-//我手机上,按钮点击没有反应,所以我只能通过该方法来跳转界面
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    XHImageLocationVC *vc = [[XHImageLocationVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+
 @end

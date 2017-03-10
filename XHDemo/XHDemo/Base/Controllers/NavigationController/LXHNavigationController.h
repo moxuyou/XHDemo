@@ -10,4 +10,7 @@
 
 @interface LXHNavigationController : UINavigationController
 
+/** 是否使用系统的左滑动返回功能 */
+@property(nonatomic,assign) BOOL isUsingHandleNavigationTransition;
+
 @end

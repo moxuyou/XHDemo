@@ -8,6 +8,11 @@
 
 #import "XHImageLocationVC.h"
 #import "XHTansformView.h"
+#import "LXHNavigationController.h"
+#import "XHScaleLabel.h"
+
+static CGFloat bgW = 300;
+static CGFloat bgH = 200;
 @interface XHImageLocationVC ()<UIGestureRecognizerDelegate>
 
 /**  */
@@ -43,10 +48,11 @@
         
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < 20; j ++) {
-                UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake((w + space) * j, (h + space) * i, w, h)];
-                lable.text = [NSString stringWithFormat:@"%i--%i", i, j];
-                lable.textColor = [UIColor whiteColor];
-                lable.font = [UIFont systemFontOfSize:10.0];
+                XHScaleLabel *lable = [[XHScaleLabel alloc] initWithFrame:CGRectMake((w + space) * j, (h + space) * i, w, h)];
+                lable.text = [NSString stringWithFormat:@"%i-%i", i, j];
+                lable.textColor = [UIColor blackColor];
+                lable.textAlignment = NSTextAlignmentCenter;
+                lable.font = [UIFont systemFontOfSize:4.0];
                 lable.backgroundColor = [UIColor whiteColor];
                 [view addSubview:lable];
             }
@@ -72,6 +78,23 @@
     [self setUpXHImageLocationVC];
     
     [self redView];
+    
+    [self setUpNavigation];
+    
+    bgW = 300;
+    bgH = 200;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    LXHNavigationController *navi = (LXHNavigationController *)self.navigationController;
+    navi.isUsingHandleNavigationTransition = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    LXHNavigationController *navi = (LXHNavigationController *)self.navigationController;
+    navi.isUsingHandleNavigationTransition = YES;
 }
 
 - (void)setUpXHImageLocationVC{
@@ -84,11 +107,15 @@
     
 //    NSLog(@"%s", __func__);
     
-    CGPoint point2 = [panGes velocityInView:panGes.view];
+//    CGPoint point2 = [panGes velocityInView:panGes.view];
     CGPoint point = [panGes translationInView:panGes.view];
 //    point = CGPointMake(point.x - point2.x, point.y - point2.y);
-    
-    NSLog(@"%@", self.redView);
+    if (self.redView.transform.a >= 1) {
+        
+        bgW *= self.redView.transform.a;
+        bgH *= self.redView.transform.a;
+    }
+//    NSLog(@"%@", self.redView);
 //    CGRect rect = CGRectMake(self.redView.frame.origin.x + point.x, self.redView.frame.origin.y + point.y, self.redView.LXHWidth, self.redView.LXHHeight);
 //    self.redView.frame = rect;
     if (panGes.view.frame.origin.y >= self.bgView.LXHHeight * 0.5 && point.y >= 0) {
@@ -109,27 +136,31 @@
     }
     
     panGes.view.center = CGPointMake(panGes.view.center.x + point.x , panGes.view.center.y + point.y);
+    NSLog(@"%@", panGes.view);
     //每次移动完，将移动量置为0，否则下次移动会加上这次移动量
     [panGes setTranslation:CGPointMake(0, 0) inView:self.view];
-//    self.redView.transform = CGAffineTransformTranslate(self.redView.transform, point.x, point.y);
-//    self.redView.transform = CGAffineTransformIdentity;
-
+    
     if (panGes.state == UIGestureRecognizerStateEnded) {
+        //控制图片的Y值不能太下
         if (panGes.view.frame.origin.y >= self.bgView.LXHHeight * 0.5) {
             
-            panGes.view.frame = CGRectMake(panGes.view.LXHX, panGes.view.LXHHeight * 0.5, panGes.view.LXHWidth, panGes.view.LXHHeight);
-        }
-        if (panGes.view.frame.origin.y <= -(panGes.view.LXHHeight * 0.5)) {
+            panGes.view.frame = CGRectMake(panGes.view.frame.origin.x, self.bgView.LXHHeight * 0.5, bgW, bgH);
             
-            panGes.view.frame = CGRectMake(panGes.view.LXHX, -panGes.view.LXHHeight * 0.5, panGes.view.LXHWidth, panGes.view.LXHHeight);
         }
-        if (panGes.view.frame.origin.x <= -self.bgView.LXHWidth * 0.5) {
+        //控制图片的Y值不能太上
+        if (panGes.view.frame.origin.y <= -(self.bgView.LXHHeight * 0.5)) {
             
-            panGes.view.frame = CGRectMake(-self.bgView.LXHWidth * 0.5, panGes.view.LXHY, panGes.view.LXHWidth, panGes.view.LXHHeight);
+            panGes.view.frame = CGRectMake(panGes.view.frame.origin.x, -self.bgView.LXHHeight * 0.5, bgW, bgH);
         }
+        //控制图片的X值不能太左
+        if (panGes.view.frame.origin.x <= -(self.bgView.LXHWidth * 0.5)) {
+            
+            panGes.view.frame = CGRectMake(-self.bgView.LXHWidth * 0.5, panGes.view.frame.origin.y, bgW, bgH);
+        }
+        //控制图片的X值不能太右
         if (panGes.view.frame.origin.x >= self.bgView.LXHWidth * 0.5) {
             
-            panGes.view.frame = CGRectMake(self.bgView.LXHWidth * 0.5, panGes.view.LXHY, panGes.view.LXHWidth, panGes.view.LXHHeight);
+            panGes.view.frame = CGRectMake(self.bgView.LXHWidth * 0.5, panGes.view.frame.origin.y, bgW, bgH);
         }
     }
 }
@@ -161,7 +192,13 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
     return YES;
+}
+
+- (void)setUpNavigation{
+    
+    self.navigationController.navigationBarHidden = NO;
 }
 
 @end

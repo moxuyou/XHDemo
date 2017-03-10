@@ -19,7 +19,7 @@
 - (UILabel *)titleLabel{
     
     if (_titleLabel == nil) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.LXHWidth, 30)];
         label.center = CGPointMake(self.center.x, self.LXHHeight - 35);
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
@@ -35,7 +35,7 @@
     
     if (_titleDetailLabel == nil) {
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.LXHWidth, 20)];
         label.center = CGPointMake(self.center.x, self.LXHHeight - 10);
         label.font = [UIFont systemFontOfSize:12];
         label.textAlignment = NSTextAlignmentCenter;
@@ -78,6 +78,7 @@
 - (void)layoutSubviews{
     
     [super layoutSubviews];
+    
     self.moreButton.center = CGPointMake(self.LXHWidth - 25, self.LXHHeight - 20);
     self.titleDetailLabel.center = CGPointMake(self.center.x, self.LXHHeight - 10);
     self.titleLabel.center = CGPointMake(self.center.x, self.LXHHeight - 35);
